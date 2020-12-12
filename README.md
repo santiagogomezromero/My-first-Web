@@ -1,2 +1,2 @@
 # My-first-Web
-I going to create my first web about myself
+I am going to create my first web about myself
