@@ -1,0 +1,65 @@
+[33mcommit 9efdcc65b729afec3f58fe44ca81cbfdd845a802[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Santiago Gómez <santiagogomezromerowork@gmail.com>
+Date:   Wed Dec 16 13:14:44 2020 -0500
+
+    Se hizo responsive la sección de proyectos
+
+[33mcommit a734686130d927e60b13ed9ac0be00bf682857ec[m
+Author: Santiago Gómez <santiagogomezromerowork@gmail.com>
+Date:   Wed Dec 16 12:33:53 2020 -0500
+
+    Hicimos responsive la sección del header y cambiamos el metadato del viewport
+
+[33mcommit a3f7d1009fc15bb36711dfe6b305b6f708a13171[m
+Author: Santiago Gómez <santiagogomezromerowork@gmail.com>
+Date:   Wed Dec 16 12:03:20 2020 -0500
+
+    Agregué los media en estilos.css
+
+[33mcommit bda808c713ecf82130c62a23f37cc3ebd8cf9eac[m
+Author: Santiago Gómez <santiagogomezromerowork@gmail.com>
+Date:   Tue Dec 15 14:04:11 2020 -0500
+
+    Agregue los Flex-Rap para adaptar el contenido a Móvil. En el próximo commit voy a agregar los MediaQuiares
+
+[33mcommit ba9f8e9fedfe162cb98af214bb8c3c846b6555ac[m[33m ([m[1;31mwebsantiago/master[m[33m)[m
+Author: Santiago Gómez <santiagogomezromerowork@gmail.com>
+Date:   Sun Dec 13 10:42:42 2020 -0500
+
+    Cambio en la posicion de las imágenes de intereses
+
+[33mcommit 43316f944524015643d68c59e563fc22cd085418[m
+Author: Santiago Gómez <santiagogomezromerowork@gmail.com>
+Date:   Sat Dec 12 12:08:29 2020 -0500
+
+    Agregue mi Github en la seccion de contacto
+
+[33mcommit f1f22b26e9dd7fc73768a269a279df4cb8bb1105[m
+Author: Santiago Gómez <santiagogomezromerowork@gmail.com>
+Date:   Sat Dec 12 11:28:04 2020 -0500
+
+    corrección de typos de Photos a photos
+
+[33mcommit bc9e07b52f17aefd9d2d94308255ee140e2df0ab[m
+Author: Santiago Gómez <santiagogomezromerowork@gmail.com>
+Date:   Fri Dec 11 20:19:46 2020 -0500
+
+    Eliminé el .jpg del gitignore
+
+[33mcommit dd08fdd3fd608cbfbd827f1c6f769a7b800d5b4b[m
+Author: Santiago Gómez <santiagogomezromerowork@gmail.com>
+Date:   Fri Dec 11 19:48:04 2020 -0500
+
+    Agregue el gitignore
+
+[33mcommit 19238922366507814883481c80c3ce5d59d285e0[m
+Author: Santiago Gómez <santiagogomezromerowork@gmail.com>
+Date:   Fri Dec 11 19:42:48 2020 -0500
+
+    Agregue la web de Santiago
+
+[33mcommit ee8c7cd032c69531ae9938179137f866b5132f86[m
+Author: Santiago Gómez <santiagogomezromerowork@gmail.com>
+Date:   Wed Dec 2 13:07:05 2020 -0500
+
+    Este es el primer commit de este archivo

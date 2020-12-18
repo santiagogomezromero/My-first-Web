@@ -9,12 +9,13 @@
     <meta name="viewport" content="width=device-width">
   </head>
   <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
       <div class="container">
         <figure class="logo">
           <a href="index.html"><img src="images/logo-santiago1.png" height="60px"alt="Logo de la página web"></a>
         </figure>
-      <nav class="menu">
+      <nav class="menu" >
         <ol>
           <li>
             <a class="link" href="#projects">Projects</a>
@@ -134,5 +135,25 @@
         </div>
       </div>
     </footer>  
+    <script>
+      const menu = document.querySelector('.menu');
+      console.log(menu);
+      const burgerButton = document.querySelector('#burger-menu');
+      console.log(burgerButton);
+
+      burgerButton.addEventListener('click', hideShow);
+      function hideShow() {
+        if(menu.classList.contains('is-active'))
+        {
+          menu.classList.remove('is-active');
+        }else{
+          menu.classList.add('is-active');
+        }
+
+        
+      }
+
+
+    </script>
   </body>
 </html>
