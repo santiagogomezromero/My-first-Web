@@ -4,6 +4,39 @@
 #cccccc -> Gris Claro
 #ffffff -> blanco
 */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?cvetfp');
+  src:  url('fonts/icomoon.eot?cvetfp#iefix') format('embedded-opentype'),
+    url('../icomoon/fonts/icomoon.ttf?cvetfp') format('truetype'),
+    url('../icomoon/fonts/icomoon.woff?cvetfp') format('woff'),
+    url('../icomoon/fonts/icomoon.svg?cvetfp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e900";
+}
+
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
@@ -29,6 +62,7 @@ h1{
   line-height: 150%;
   letter-spacing: -.2px;
   color: white;
+  z-index: 1;
 }
 
 h1 strong{
@@ -50,6 +84,14 @@ h2{
   justify-content: space-between;
   height: 70px;
   align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .menu{
@@ -83,10 +125,24 @@ h2{
   display: flex;
   align-items:  center;
   justify-content: space-between;
+  position: relative;
+  top: 70px;
+  bottom: auto;
+  left: auto;
+  right: auto;
 }
 
 .hero-image{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  flex-wrap: wrap;
+  object-position: 0 0;
   object-fit: cover;
+  height: inherit;
 }
 
 .skill-list{
@@ -96,11 +152,13 @@ h2{
 
 .skill-list-title{
   margin-left: 20px;
+  position: relative;
+  top: 63px;  
 }
 
 .skill{
-  margin: 10px;
-  width: 480px;
+  margin: 1%;
+  width: 48%;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -111,6 +169,7 @@ h2{
   width: 480px;
   height: 300px;
   object-fit: cover;
+  object-position: 0 1px;
 }
 
 .skill-detail{
@@ -139,7 +198,9 @@ h2{
 }
 
 .container{
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
+  flex: 1;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
@@ -155,9 +216,7 @@ h2{
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.social{
+  flex-wrap: wrap;
 }
 
 .social-link{
@@ -201,4 +260,159 @@ h2{
 
 .footer a{
   color: white;
+}
+
+.burger-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.8);
+  display: none;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  color: white;
+}
+
+@media screen and (max-width: 1023px){
+
+  .hero{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 4em;
+  }
+
+  .hero-image{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -50px;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    object-position: 0 0;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    z-index: 1;
+  }  
+
+}
+
+@media screen and (max-width: 767px){
+  .header.logo{
+    height: auto;
+  }
+
+  .burger-button{
+   display: block;  
+  }
+
+  .header{
+    display: block;
+    position: absolute;
+    z-index: 2;
+  }
+  .header ol{
+    display: block;
+  }
+  .header ol li{
+    height: 50px;
+  }
+  .header a{
+    justify-content: center;
+    height: auto;
+    font-size: 2em;
+  }
+  .header .logo{
+    text-align: center;
+  }
+
+  .menu{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    background-color: #005187d4;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+
+  .menu.is-active{
+    left: 0;      
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .skill-list{
+    width: auto;
+    flex-shrink: initial;
+  }
+
+  .skill-list img{
+    width: 100%;
+  }
+
+  .skill{
+    width: auto;
+    flex: initial;
+  }
+
+
+  .contact{
+    display: block;
+    padding: .5em 0;
+    text-align: center;
+    height: auto;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .hero-image{
+    top: 0;
+  }
+  .skill-list img{
+    width: 100%;
+    height: auto;
+  }
+
+  .skill-detail{
+    font-size: 18px;
+  }
+
+  .footer{
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;   /*Este borde sirve para solucionar el problema del margin colapsing */
+  }
+
+  .contact h3{
+    font-size: 25px;
+  }
+
+}
+
+@media screen and (max-width: 320px){
+
+  .hero-image {
+    height: 100%;
+  }
+
+  .skill-list-title{
+    font-size: 16px;
+  }
+
 }

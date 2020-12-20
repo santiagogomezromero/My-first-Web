@@ -5,9 +5,11 @@
     <link rel = "icon" type="image/png" href="images/favicon-santiago.jpg" >
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/skills.css">
+    <meta name="viewport" content="width=device-width">
     <title>Skills</title>
   </head>
   <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
       <div class="container">
         <figure class="logo">
@@ -36,11 +38,11 @@
         <h1>
           Know my skills
         </h1>
-        <img src="images/skills_hero.png" alt="Skills" width="500px">
+        <img src="images/skills_hero.png" alt="Skills" width="500px" class="hero-image">
       </div>
     </section>
     <div class="container">
-      <h2 class="interest-list-title">About my experience</h2>
+      <h2 class="skill-list-title">About my experience</h2>
     </div>
     <section id="skills" class="skill-list">
       <div class="container">
@@ -129,9 +131,41 @@
           <p>Santiago Gómez Romero 2020</p>
         </div>
         <div class="">
-          <p>Designed with love <\3 by <a href="https:instagram.com/santiagogomezcol">@santiagogomezcol</a></p>
+          <p>Designed with love ❤ by <a href="https:instagram.com/santiagogomezcol">@santiagogomezcol</a></p>
         </div>
       </div>
     </footer>
+    <script>
+      const menu = document.querySelector('.menu');
+      console.log(menu);
+      const burgerButton = document.querySelector('#burger-menu');
+      console.log(burgerButton);
+
+      const ipad = window.matchMedia('screen and (max-width: 767px)');
+
+      ipad.addListener(validation);
+
+      function validation(event){
+        if (event.matches){
+           burgerButton.addEventListener('click', hideShow);
+        } else
+        {
+          burgerButton.removeEventListener('click', hideShow);
+        }
+        console.log(event.matches);
+      }
+
+      validation(ipad);
+
+      function hideShow() {
+        if(menu.classList.contains('is-active'))
+        {
+          menu.classList.remove('is-active');
+        }else{
+          menu.classList.add('is-active');
+        }    
+      }
+
+    </script>
   </body>
 </html>
