@@ -83,6 +83,13 @@ h2{
   height: 70px;
   align-items: center;
   flex-wrap: wrap;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .menu{
@@ -116,7 +123,11 @@ h2{
   display: flex;
   align-items:  center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  position: relative;
+  top: 70px;
+  bottom: auto;
+  left: auto;
+  right: auto;
 }
 
 .hero-image{
@@ -126,6 +137,7 @@ h2{
 .portfolio{
   background: #ffffff;
   padding: 20px;
+  position: relative;
 }
 
 .project{
@@ -309,34 +321,43 @@ h2{
   color: white;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1023px){
 
   .hero{
     height: auto;
     position: relative;
     overflow: hidden;
-    padding: 2em;
+    padding: 4em;
+  }
+
+  .portfolio{
+    position: relative;
+    top: 30px;
   }
 
   .hero-image{
     position: absolute;
-    z-index: 1;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     width: 100%;
+    flex-wrap: wrap;
+    object-position: 0 28%;
   }
 
   h1 {
     font-size: 2em;
-    z-index: 2;
+    z-index: 1;
   }  
   
 }
 
 @media screen and (max-width: 767px){
 
+  .header.logo{
+    height: auto;
+  }
 
   .burger-button{
    display: block;  
@@ -344,19 +365,20 @@ h2{
 
   .header{
     display: block;
-    height: auto;
+    position: absolute;
+    z-index: 2;
   }
   .header ol{
     display: block;
+    line-height: 300px;
   }
   .header ol li{
     height: 50px;
   }
   .header a{
     justify-content: center;
-    height: 40px;
+    height: auto;
     font-size: 2em;
-    margin-bottom: .5em;
   }
   .header .logo{
     text-align: center;
@@ -369,6 +391,7 @@ h2{
     left: -100vw;
     background-color: #005187d4;
     width: 100vw;
+    height: 100vh;
     bottom: 0;
     display: flex;
     align-items: center;
@@ -377,7 +400,7 @@ h2{
   }
 
   .menu.is-active{
-    left: 0;
+    left: 0;      
   }
 
   .project{
@@ -393,7 +416,7 @@ h2{
 
   .project-details{
     width: auto;
-    font-size: 16px;
+    font-size: 18px;
   }
   .project-date{
     font-size: 1em;
@@ -411,7 +434,7 @@ h2{
 
   }
   .project-description{
-    font-size: .8em;
+    font-size: 1em;
   }
 
   .interest{
@@ -437,9 +460,12 @@ h2{
     font-size: 1.5em;
   }
 
-
   .project-details{
-    font-size: 12px; 
+    font-size: 18px; 
+  }
+
+  .project-description{
+    font-size: 1em;
   }
 
   .interest-detail{
@@ -469,7 +495,7 @@ h2{
   }
 
   .hero{
-    padding: 2em 1em;
+    padding: 4em 1em;
   }
   
 }
